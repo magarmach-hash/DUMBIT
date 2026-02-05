@@ -490,6 +490,36 @@ cargo fmt
 cargo clippy
 ```
 
+## 🚀 Quick Start – Local Development
+
+DUMBIT can be run locally using Docker without installing Rust.
+
+### Build the Image
+```bash
+docker build -t dumbit:latest .
+Run the CLI
+bash
+Copy code
+docker run -it --rm \
+  -v dumbit-data:/data \
+  dumbit:latest
+This runs DUMBIT in interactive mode and persists data using a local Docker volume.
+
+Example Usage
+bash
+Copy code
+dumbit set-profile --daily 8 --weekly 40
+dumbit add "Initial setup" --hours 2 --deadline 2026-02-15
+dumbit today
+To reset all stored data:
+
+bash
+Copy code
+docker volume rm dumbit-data
+cpp
+Copy code
+
+
 ### Technology Stack
 
 - **Language**: Rust 2021 Edition
