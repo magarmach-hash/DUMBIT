@@ -1,7 +1,7 @@
 use clap::{Parser, Subcommand};
 use colored::*;
 use serde::{Deserialize, Serialize};
-use surrealdb::{Surreal, engine::local::Db};
+use surrealdb::{Surreal, engine::local::RocksDb};
 use comfy_table::Table;
 use chrono::{Local, NaiveDate};
 
@@ -76,7 +76,7 @@ enum Commands {
 // -------------------- DECISION ENGINE --------------------
 
 async fn evaluate_task(
-    db: &Surreal<Db>,
+    db: &Surreal<RocksDb>,
     hours: f32,
     deadline: String,
 ) -> Result<(bool, String), surrealdb::Error> {
@@ -137,7 +137,7 @@ async fn evaluate_task(
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("{}", "DUMBIT initialized".cyan().bold());
 
-    let db = Surreal::new::<Db>(()).await?;
+    let db = Surreal::new::<RocksDb>("data.db").await?;
     db.use_ns("prod").use_db("tasks").await?;
 
     let cli = Cli::parse();
@@ -237,7 +237,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 // -------------------- TABLE --------------------
 
 async fn print_table(
-    db: &Surreal<Db>,
+    db: &Surreal<RocksDb>,
     title: &str,
     query: &str,
     date: Option<String>,
