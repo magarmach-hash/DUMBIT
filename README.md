@@ -50,9 +50,9 @@ Instead of helping you "do more," DUMBIT helps you **commit realistically** and 
 
 ---
 
-### Target Users (Personas)
+### Target Users 
 
-#### Person 1: magarmach - The Overwhelmed Developer
+#### Person 1: magarmach - The Overwhelmed Engineer
 
 **Demographics:**
 - Age: 20
