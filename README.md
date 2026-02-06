@@ -52,11 +52,11 @@ Instead of helping you "do more," DUMBIT helps you **commit realistically** and 
 
 ### Target Users (Personas)
 
-#### Persona 1: Alex - The Overwhelmed Developer
+#### Person 1: magarmach - The Overwhelmed Developer
 
 **Demographics:**
-- Age: 28
-- Role: Full-stack software engineer
+- Age: 20
+- Role: Devops Engineer
 - Experience: 5 years
 - Work style: Remote, flexible hours
 
@@ -80,10 +80,10 @@ Instead of helping you "do more," DUMBIT helps you **commit realistically** and 
 
 ---
 
-#### Persona 2: Maya - The Ambitious Student
+#### Person 2: Aanya - The Ambitious Student
 
 **Demographics:**
-- Age: 21
+- Age: 20
 - Role: Computer Science major
 - Context: Junior year, part-time job
 - Work style: Balancing classes, assignments, job, social life
@@ -108,10 +108,10 @@ Instead of helping you "do more," DUMBIT helps you **commit realistically** and 
 
 ---
 
-#### Persona 3: Jordan - The Freelance Consultant
+#### Person 3: Gadhi - The Freelance Consultant
 
 **Demographics:**
-- Age: 35
+- Age: 20
 - Role: Independent business consultant
 - Context: Multiple clients, variable workload
 - Work style: Project-based, client-driven
