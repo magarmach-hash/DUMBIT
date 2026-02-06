@@ -1,4 +1,4 @@
-# DUMBIT 🧠
+# DUMBIT 
 
 **Decision Utility for Managed Balance, Intent & Time**
 
@@ -12,7 +12,7 @@
        D E C I S I O N   U T I L I T Y
 ```
 
-## 📖 Vision Document
+## Vision Document
 
 ### Project Name & Overview
 
@@ -22,7 +22,7 @@ Built in Rust for performance and reliability, DUMBIT uses a sophisticated Decis
 
 ---
 
-### 🎯 Problem It Solves
+### Problem It Solves
 
 #### The Over-Commitment Crisis
 
@@ -50,7 +50,7 @@ Instead of helping you "do more," DUMBIT helps you **commit realistically** and 
 
 ---
 
-### 👥 Target Users (Personas)
+### Target Users (Personas)
 
 #### Persona 1: Alex - The Overwhelmed Developer
 
@@ -136,7 +136,7 @@ Instead of helping you "do more," DUMBIT helps you **commit realistically** and 
 
 ---
 
-### 🌟 Vision Statement
+### Vision Statement
 
 > **"Enable professionals to make realistic commitments and deliver consistently by enforcing physiological and psychological capacity limits through intelligent gatekeeping."**
 
@@ -151,7 +151,7 @@ DUMBIT doesn't help you "do more" — it helps you **do what you commit to, ever
 
 ---
 
-### 🚀 Key Features / Goals
+### Key Features / Goals
 
 #### Core Features (v2.0)
 
@@ -210,7 +210,7 @@ DUMBIT doesn't help you "do more" — it helps you **do what you commit to, ever
 
 ---
 
-### 📊 Success Metrics
+### Success Metrics
 
 #### User Success Metrics
 
@@ -337,7 +337,7 @@ DUMBIT doesn't help you "do more" — it helps you **do what you commit to, ever
 
 ---
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 ```
 ┌─────────────────────────────────────────────────┐
@@ -364,7 +364,7 @@ DUMBIT doesn't help you "do more" — it helps you **do what you commit to, ever
 
 ---
 
-## ⚡ Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -400,7 +400,7 @@ dumbit today
 
 ---
 
-## 📚 Usage Examples
+## Usage Examples
 
 ### Adding Tasks
 
@@ -457,7 +457,7 @@ dumbit set-profile --daily 6 --weekly 30
 
 ---
 
-## 🛠️ Development
+## Development
 
 ### Project Structure
 
@@ -490,7 +490,7 @@ cargo fmt
 cargo clippy
 ```
 
-## 🚀 Quick Start – Local Development
+## Quick Start – Local Development
 
 DUMBIT can be run locally using Docker without installing Rust.
 
@@ -554,7 +554,3 @@ Built with:
 - [Tokio](https://tokio.rs/) - Async runtime
 
 
-
-**Made with discipline and intentionality** 🧠✨
-
-*"Don't do more. Do what you commit to, every time."*
