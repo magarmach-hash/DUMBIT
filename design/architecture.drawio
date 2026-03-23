@@ -1,0 +1,117 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="DUMBIT System Architecture">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- USER -->
+        <mxCell id="user" value="USER&#xa;(Terminal)" style="shape=umlActor;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="60" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- UI BOX -->
+        <mxCell id="ui" value="USER INTERFACE&#xa;&#xa;CLI Interface (Clap Framework)&#xa;&#xa;Commands:&#xa;- add&#xa;- today&#xa;- week&#xa;- complete&#xa;- delete&#xa;- set-profile" 
+        style="rounded=1;fillColor=#1e293b;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="120" y="150" width="240" height="220" as="geometry"/>
+        </mxCell>
+
+        <!-- APP LOGIC -->
+        <mxCell id="app" value="APPLICATION LOGIC" 
+        style="rounded=1;fillColor=#14532d;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="420" y="120" width="300" height="300" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision Engine -->
+        <mxCell id="decision" value="Decision Engine&#xa;- Capacity Validation&#xa;- Date Validation&#xa;- Load Calculation&#xa;- Reliability Tax System"
+        style="rounded=1;fillColor=#6b21a8;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="440" y="150" width="260" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- Business Logic -->
+        <mxCell id="business" value="Business Logic (Rust Core)&#xa;- Task Management&#xa;- Profile Management&#xa;- Reliability Tracking&#xa;- Query Processing"
+        style="rounded=1;fillColor=#7c2d12;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="440" y="260" width="260" height="110" as="geometry"/>
+        </mxCell>
+
+        <!-- Output Formatter -->
+        <mxCell id="output" value="Output Formatter&#xa;- Colored Terminal Output&#xa;- Table Formatting"
+        style="rounded=1;fillColor=#854d0e;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="440" y="380" width="260" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- DATA PERSISTENCE -->
+        <mxCell id="data" value="DATA PERSISTENCE"
+        style="rounded=1;fillColor=#78350f;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="760" y="150" width="260" height="250" as="geometry"/>
+        </mxCell>
+
+        <!-- SurrealDB -->
+        <mxCell id="surreal" value="SurrealDB (Embedded DB)&#xa;Tables:&#xa;- task&#xa;- settings"
+        style="rounded=1;fillColor=#1e3a8a;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="780" y="180" width="220" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- RocksDB -->
+        <mxCell id="rocks" value="RocksDB (Storage Engine)&#xa;Local File Storage: dumbit_db/"
+        style="rounded=1;fillColor=#3f3f46;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="780" y="300" width="220" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- DEPLOYMENT -->
+        <mxCell id="deploy" value="DEPLOYMENT"
+        style="rounded=1;fillColor=#111827;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="300" y="470" width="600" height="180" as="geometry"/>
+        </mxCell>
+
+        <!-- Cargo -->
+        <mxCell id="cargo" value="Cargo Build System&#xa;- cargo build&#xa;- cargo install&#xa;- cross-platform"
+        style="rounded=1;fillColor=#92400e;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="320" y="500" width="180" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Docker -->
+        <mxCell id="docker" value="Docker Container&#xa;- Dockerfile&#xa;- Isolated environment&#xa;- Consistent deployment"
+        style="rounded=1;fillColor=#1e3a8a;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="520" y="500" width="180" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Platforms -->
+        <mxCell id="platforms" value="Target Platforms&#xa;- Linux&#xa;- macOS&#xa;- Windows"
+        style="rounded=1;fillColor=#14532d;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="720" y="500" width="180" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Connections -->
+        <mxCell id="edge1" edge="1" parent="1" source="user" target="ui" style="endArrow=block;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge2" edge="1" parent="1" source="ui" target="decision" style="endArrow=block;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge3" edge="1" parent="1" source="decision" target="business" style="endArrow=block;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge4" edge="1" parent="1" source="business" target="surreal" style="endArrow=block;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge5" edge="1" parent="1" source="surreal" target="business" style="dashed=1;endArrow=block;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge6" edge="1" parent="1" source="business" target="output" style="endArrow=block;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge7" edge="1" parent="1" source="output" target="ui" style="dashed=1;endArrow=block;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
