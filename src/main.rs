@@ -209,14 +209,14 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             db.query("UPDATE task SET status = 'COMPLETED' WHERE title = $t")
                 .bind(("t", title))
                 .await?;
-            println!("✅ Completed");
+            println!("Completed");
         }
 
         Commands::Delete { title } => {
             db.query("DELETE task WHERE title = $t")
                 .bind(("t", title))
                 .await?;
-            println!("🗑 Deleted");
+            println!("Deleted");
         }
 
         Commands::SetProfile { daily, weekly } => {
